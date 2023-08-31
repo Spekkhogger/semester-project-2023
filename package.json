@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "sass src/scss:dist/css",
+    "lint": "eslint src/**/*.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.66.1"
+  }
+}

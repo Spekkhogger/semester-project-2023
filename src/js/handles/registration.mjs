@@ -43,4 +43,3 @@ async function createAccount(profile){
         console.log(error); 
     }
 }
-registrationSubmission()

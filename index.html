@@ -75,8 +75,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
-                <form class="form-group" action="" id="registrationForm">
-                  <input class="form-control mb-2" type="text" placeholder="Full name" required maxlength="30">
+                <form class="form-group" id="registrationForm">
+                  <input class="form-control mb-2" type="text" placeholder="username" required maxlength="30" pattern="^[a-zA-Z0-9_]*$">
                   <input class="form-control mb-2" type="email" placeholder="E-mail" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$">
                   <input class="form-control mb-2" type="password" placeholder="Password" required minlength="8">
                   <input class="form-control mb-2" type="url" placeholder="Avatar">
@@ -101,4 +101,5 @@
 
     <footer></footer>
   </body>
+  <script type="module" src="src/js/handles/registration.mjs"></script>
 </html>

@@ -24,24 +24,27 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg d-flex bg-body-tertiary">
-        <div class="logo">
+      <nav class="navbar navbar-expand-sm d-flex justify-content-between custom-bg">
+        <div class="logo m-2">
           <a class="navbar-brand" href="index.html"
             ><img
-              class="img-fluid"
+              class="img-fluid w-50"
               id="logoImage"
               src="images/logo/cherry_1791356.png"
               alt="Cherry auctions logo"
-          /></a>
+            />
+          </a>
         </div>
-        <ul class="navbar-nav">
-          <li class="nav-item btn btn-primary m-1">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</button>
-          </li>
-          <li class="nav-item btn btn-secondary m-1">
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
-          </li>
-        </ul>
+        <div class="d-flex m-4">
+          <ul class="navbar-nav">
+            <li class="nav-item m-1">
+              <button type="button" class="btn custom-primary" data-bs-toggle="modal" data-bs-target="#logInModal">Log In</button>
+            </li>
+            <li class="nav-item m-1">
+              <button type="button" class="btn custom-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <div class="modal fade" id="logInModal" tabindex="-1">
@@ -85,8 +88,8 @@
                 </form>                
               </div>
               <div class="modal-footer">
-                <p>New to Cherry Auctions?</p>
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#logInModal"></button>
+                <p>Already have an account?</p>
+                <button type="button" class="btn custom-secondary" data-bs-toggle="modal" data-bs-target="#logInModal">Sign in</button>
               </div>
             </div>
           </div>
@@ -102,4 +105,6 @@
     <footer></footer>
   </body>
   <script type="module" src="src/js/handles/registration.mjs"></script>
+  <script type="module" src="src/js/storage.mjs"></script>
+  
 </html>

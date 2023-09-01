@@ -7,7 +7,7 @@ export function loadKey (key){
         localStorage.getItem(key);
         return JSON.parse(value); 
     }catch(error) {
-        console.log(error)
+        console.log(error);
         // Add error alert
     }
 }

@@ -2,13 +2,14 @@
 // Handles submission
 
 export function registrationSubmission() {
-    const registrationForm = document.querySelector("#registrationForm");
+    const registration = document.querySelector("#registrationForm");
 
-    registrationForm.addEventListener("submit", async(event) => {
+    registration.addEventListener("submit", async(event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
+        console.log(formData);
         const profile = Object.fromEntries(formData.entries());
-
+        console.log(profile);
         await createAccount(profile);
         
     })
@@ -19,13 +20,10 @@ import { base_API_URL } from "../constants.mjs";
 
 const path = "auth/register";
 const method = "POST"; 
-const apiCall = base_API_URL + path;
-console.log(apiCall); 
 
 
 async function createAccount(profile){
     const apiCall = base_API_URL + path;
-    console.log(apiCall); 
 
     try {
         const response = await fetch(apiCall, {

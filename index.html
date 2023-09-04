@@ -49,21 +49,21 @@
 
       <div class="modal fade" id="logInModal" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content modal-bg">
             <div class="modal-header">
-              <h1 class="modal-header">Log In</h1>
+              <h1 class="header">Log In</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
                 <form class="form-group" action="" id="logInForm">
                   <input class="form-control mb-2" type="email" placeholder="E-mail" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$">
                   <input class="form-control mb-2" type="password" placeholder="Password" required minlength="8">
-                  <button type="button">Log In</button>
+                  <button type="button" class="btn custom-secondary">Log In</button>
                 </form>                
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer mx-auto d-flex flex-column">
                 <p>New to Cherry Auctions?</p>
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registerModal">Register here</button>
+                <button type="button" class="btn custom-bg" data-bs-toggle="modal" data-bs-target="#registerModal">Register here</button>
               </div>
             </div>
           </div>
@@ -72,24 +72,24 @@
 
       <div class="modal fade" id="registerModal" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content modal-bg">
             <div class="modal-header">
-              <h1 class="modal-header">Create account</h1>
+              <h1 class="header m-1">Create account</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
                 <form class="form-group" id="registrationForm">
-                  <input class="form-control mb-2" type="text" placeholder="username" required maxlength="30" pattern="^[a-zA-Z0-9_]*$">
+                  <input class="form-control mb-2" type="text" placeholder="Username" required maxlength="30" pattern="^[a-zA-Z0-9_]*$">
                   <input class="form-control mb-2" type="email" placeholder="E-mail" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$">
                   <input class="form-control mb-2" type="password" placeholder="Password" required minlength="8">
                   <input class="form-control mb-2" type="url" placeholder="Avatar">
 
-                  <button type="button">Create account</button>
+                  <button type="button" class="btn custom-secondary">Create account</button>
                 </form>                
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer mx-auto d-flex flex-column">
                 <p>Already have an account?</p>
-                <button type="button" class="btn custom-secondary" data-bs-toggle="modal" data-bs-target="#logInModal">Sign in</button>
+                <button type="button" class="btn custom-bg" data-bs-toggle="modal" data-bs-target="#logInModal">Sign in</button>
               </div>
             </div>
           </div>

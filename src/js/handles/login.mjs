@@ -29,7 +29,7 @@ async function logInAccount(profile){
         });
 
         const {accessToken, ...user} = await response.json();
-        saveKey("token, accessToken");
+        saveKey("token", accessToken);
         saveKey("profile", user);
     } catch (error){
         console.log(error); 

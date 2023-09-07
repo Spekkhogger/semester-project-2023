@@ -2,7 +2,8 @@ import { saveKey, loadKey, removeKey } from "./storage.mjs";
 
 import { registrationSubmission } from "./handles/registration.mjs";
 import { logInSubmission } from "./handles/login.mjs";
-import { getAuctionsList } from "./API/Auth/getAuctionsList.mjs";
+import { getAuctionsList } from "./API/Auctions/getAuctionsList.mjs";
+import { log } from "./API/Auctions/getItem.mjs";
 
 
 
@@ -17,4 +18,8 @@ switch (path) {
         break;
     case "/auctions/":
         getAuctionsList();
+        break;
+    case "/auction/":
+        log();
+        break;
 }

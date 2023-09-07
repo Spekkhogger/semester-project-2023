@@ -1,0 +1,38 @@
+:root {
+    --dark-red: #6b2120;
+    --light-pink: #ebcecc;
+    --bright-pink: #ffafa6;
+    --light-blue: #D4e0ee;
+    --font-color-black: #2c2c2c;
+    --font-color-white: #fff;
+}
+
+.custom-primary {
+    background-color: var(--light-pink);
+    color: var(--dark-red);
+}
+
+.custom-secondary {
+    background-color: var(--dark-red);
+    color: var(--font-color-white);
+}
+
+.custom-bg {
+    background-color: var(--light-blue);
+    color: var(--font-color-black);
+}
+
+.modal-bg {
+    background-color: #EBCECC;
+    color: var(--font-color-black);
+}
+
+#logoImage {
+    max-width: 100px;
+    margin-left: 1em;
+}
+
+.card {
+    width: 15rem;
+    height: auto;
+}

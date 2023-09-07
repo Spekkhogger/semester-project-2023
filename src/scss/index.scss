@@ -1,21 +1,2 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "base";
-
-// Custom colors
-.custom-primary {
-    background-color: #EBCECC;
-    color: #6B2120;
-}
-
-.custom-secondary {
-    background-color: #6B2120;
-    color: #FFFFFF;
-}
-
-.custom-bg {
-    background-color: #D4E0EE;
-}
-
-.modal-bg {
-    background-color: #EBCECC;
-}
+@import "variables";

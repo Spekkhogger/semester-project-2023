@@ -17,6 +17,7 @@ export async function logInAccount(profile){
         const {accessToken, ...user} = await response.json();
         saveKey("token", accessToken);
         saveKey("profile", user);
+        window.location.href = "../../../../profile/";
     }
 
     const json = await response.json();

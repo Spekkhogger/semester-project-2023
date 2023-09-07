@@ -1,15 +1,41 @@
 import { base_API_URL } from "../../constants.mjs";
 
+export async function getAuctionItem() {
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
+    const queryID = params.get("id");
+    const queryParam = "?_seller=true&_bids=true"
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const queryID = params.get("id");
-
-export async function getAuctionItem(queryID) {
-    const path = "listings/";
-    const apiCall = base_API_URL + path + id;
+    const apiCall = base_API_URL + "listings/" + queryID + queryParam;
 
     const response = await fetch (apiCall);
-    const result = response.json; 
-    console.log(result); 
+    const result = response.json(); 
+    return result;
+}
+
+export async function createItemElements() {
+    const sellerImage = document.querySelector("#sellerImage");
+    const sellerName = document.querySelector("#sellerName");
+    const productImage = document.querySelector("#productImage");
+    const productTitle = document.querySelector("#productTitle");
+    const highestBid = document.querySelector("#highestBid");
+    const productDescription = document.querySelector("#productDescription");
+
+    const itemData = await getAuctionItem();
+    createImage(productImage, itemData.media[0]);
+    createImage(sellerImage, itemData.seller.avatar);
+    sellerName.textContent = itemData.seller.name;
+    productTitle.textContent = itemData.title; 
+    highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
+    productDescription.textContent = itemData.description;
+
+    // console.log(itemData);
+}
+
+
+
+function createImage (div, src){
+    const image = document.createElement("img");
+    image.src = src;
+    div.appendChild(image);
 }

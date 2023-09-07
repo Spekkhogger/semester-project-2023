@@ -58,8 +58,24 @@
     </header>
     <main>
 
-        <div class="itemContainer custom-primary">
-            
+        <div class="container custom-primary card mt-4">
+            <div class="userWrap d-flex card-content">
+                <div class="img-fluid img-thumbnail rounded sellerImage" id="sellerImage" style="width: 70px;"></div>
+                <p class="align-self-center" id="sellerName">Filler Name</p>
+            </div>
+            <div class="image" id="productImage">
+                
+            </div>
+            <div class="productInfoWrap d-flex">
+                <div class="productInfoText">
+                    <h3 id="productTitle" class="card-title">Title</h3>
+                    <h3 id="highestBid" class="card-text">Highest bid: </h3>
+                </div>
+                <div class="button btn custom-secondary">Bid</div>
+            </div>
+            <div class="card-text">
+                <p id="productDescription">Description of product...</p>
+            </div>
         </div>
 
     </main>
@@ -68,4 +84,5 @@
 
     </footer>
   </body>
+  <script type="module" src="../src/js/index.mjs"></script>
 </html>

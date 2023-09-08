@@ -22,8 +22,8 @@ export async function createItemElements() {
     const productDescription = document.querySelector("#productDescription");
 
     const itemData = await getAuctionItem();
-    createImage(productImage, itemData.media[0]);
-    createImage(sellerImage, itemData.seller.avatar);
+    createImage(productImage, itemData.media[0], 300);
+    createImage(sellerImage, itemData.seller.avatar, 60);
     sellerName.textContent = itemData.seller.name;
     productTitle.textContent = itemData.title; 
     highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
@@ -34,8 +34,11 @@ export async function createItemElements() {
 
 
 
-function createImage (div, src){
+function createImage (div, src, size){
     const image = document.createElement("img");
     image.src = src;
+    image.height = size;
+    image.width = size;
+    image.style.objectFit = "cover"; 
     div.appendChild(image);
 }

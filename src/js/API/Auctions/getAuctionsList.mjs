@@ -26,7 +26,7 @@ export async function getAuctionsList() {
             newDiv.innerHTML = 
             `
             <a href="../../../../auction/?id=${id}" id="auctionItem" class="card-body">
-                <img src="${image}" class="card-img-top" alt="Image of ${title}"
+                <img src="${image}" class="card-img-top" alt="Image of ${title}" style="object-fit: cover; height: 200px;">
                 <h1 class="card-title">${title}</h1>
                 <p class="card-text">${description}</p>
     

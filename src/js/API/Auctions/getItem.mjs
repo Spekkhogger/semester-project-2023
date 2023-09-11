@@ -1,4 +1,5 @@
 import { base_API_URL } from "../../constants.mjs";
+import { createImage } from "../../helpers/createImages.mjs";
 
 export async function getAuctionItem() {
     const queryString = document.location.search;
@@ -29,15 +30,4 @@ export async function createItemElements() {
     productTitle.textContent = itemData.title; 
     highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
     productDescription.textContent = itemData.description;
-}
-
-
-
-function createImage (div, src, size){
-    const image = document.createElement("img");
-    image.src = src;
-    image.height = size;
-    image.width = size;
-    image.style.objectFit = "cover"; 
-    div.appendChild(image);
 }

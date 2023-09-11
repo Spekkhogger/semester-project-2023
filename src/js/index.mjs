@@ -6,8 +6,6 @@ import { getAuctionsList } from "./API/Auctions/getAuctionsList.mjs";
 import { createItemElements } from "./API/Auctions/getItem.mjs";
 import { getProfile } from "./profile/getProfile.mjs";
 
-
-
 const path = location.pathname;
 
 switch (path) {
@@ -25,4 +23,5 @@ switch (path) {
         break;
     case "/profile/":
         getProfile();
+        break;
 }

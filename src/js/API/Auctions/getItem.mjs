@@ -25,11 +25,10 @@ export async function createItemElements() {
     createImage(productImage, itemData.media[0], 300);
     createImage(sellerImage, itemData.seller.avatar, 60);
     sellerName.textContent = itemData.seller.name;
+    sellerName.href = `../../../../profile/?name=${itemData.seller.name}`;
     productTitle.textContent = itemData.title; 
     highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
     productDescription.textContent = itemData.description;
-
-    // console.log(itemData);
 }
 
 

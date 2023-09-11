@@ -4,7 +4,7 @@ export function saveKey(key, value) {
 
 export function loadKey (key){
     try {
-        localStorage.getItem(key);
+        const value = localStorage.getItem(key);
         return JSON.parse(value); 
     }catch(error) {
         console.log(error);

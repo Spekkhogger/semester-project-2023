@@ -4,7 +4,7 @@ import { registrationSubmission } from "./handles/registration.mjs";
 import { logInSubmission } from "./handles/login.mjs";
 import { getAuctionsList } from "./API/Auctions/getAuctionsList.mjs";
 import { createItemElements } from "./API/Auctions/getItem.mjs";
-import { getProfile } from "./profile/getProfile.mjs";
+import { createProfile } from "./profile/getProfile.mjs";
 
 const path = location.pathname;
 
@@ -22,6 +22,6 @@ switch (path) {
         createItemElements();
         break;
     case "/profile/":
-        getProfile();
+        createProfile();
         break;
 }

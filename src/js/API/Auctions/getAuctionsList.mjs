@@ -20,8 +20,7 @@ export async function getAuctionsList() {
             const image = i.media[0]; 
             const description = i.description;
             const id = i.id;
-    
-            console.log(i);
+
     
             newDiv.innerHTML = 
             `

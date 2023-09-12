@@ -39,7 +39,6 @@ export async function createProfile(){
         userName.textContent = profileData.name; 
         userCredits.textContent += profileData.credits; 
         numberOfAuctions.textContent += profileData.listings.length;
-        console.log(auctionListings);
 
         // Listings section: 
         const auctionsTab = document.querySelector("#auctionsTab");

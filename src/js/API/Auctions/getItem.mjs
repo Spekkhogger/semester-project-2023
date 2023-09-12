@@ -28,6 +28,13 @@ export async function createItemElements() {
     sellerName.textContent = itemData.seller.name;
     sellerName.href = `../../../../profile/?name=${itemData.seller.name}`;
     productTitle.textContent = itemData.title; 
-    highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
+    console.log(itemData.bids.length)
+    
+    if (itemData.bids.length === 0){
+        highestBid.textContent = "No bids yet";
+    } else {
+        highestBid.textContent += itemData.bids[itemData.bids.length -1].amount;
+    }
+
     productDescription.textContent = itemData.description;
 }

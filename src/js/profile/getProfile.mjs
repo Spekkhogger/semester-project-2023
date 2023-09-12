@@ -32,16 +32,37 @@ export async function createProfile(){
 
     try {
         const profileData = await getProfile(); 
-        console.log(profileData);
+
+        const auctionListings = profileData.listings;
+
         createImage(profileImage, profileData.avatar, 200); 
         userName.textContent = profileData.name; 
         userCredits.textContent += profileData.credits; 
         numberOfAuctions.textContent += profileData.listings.length;
-        
+        console.log(auctionListings);
+
+        // Listings section: 
+        const auctionsTab = document.querySelector("#auctionsTab");
+        const winTab = document.querySelector("#winTab");
+
+        auctionListings.forEach(item => {
+            const wrap = document.createElement("a");
+            wrap.href = `../../../auction/?id=${item.id}`
+            wrap.classList.add("m-3"); 
+            createImage(wrap, item.media[0], 250);
+            const title = document.createElement("p");
+            title.textContent = item.title;
+            auctionsTab.appendChild(wrap); 
+            wrap.appendChild(title); 
+        });
+
+
+
+
 
     } catch (error) {
-        errorMessage.textContent = "Something went wrong";
-        container.style.display = "none";  
+        errorMessage.textContent = "Oopsiewoopsie, something went wrong: " + error;
+        container.style.display = "none";
     }
 
 }

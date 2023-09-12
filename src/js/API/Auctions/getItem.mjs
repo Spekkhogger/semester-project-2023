@@ -24,7 +24,7 @@ export async function createItemElements() {
 
     const itemData = await getAuctionItem();
     createImage(productImage, itemData.media[0], 300);
-    createImage(sellerImage, itemData.seller.avatar, 60);
+    createImage(sellerImage, itemData.seller.avatar, 50);
     sellerName.textContent = itemData.seller.name;
     sellerName.href = `../../../../profile/?name=${itemData.seller.name}`;
     productTitle.textContent = itemData.title; 

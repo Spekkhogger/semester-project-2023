@@ -2,9 +2,9 @@ import { saveKey, loadKey, removeKey } from "./storage.mjs";
 
 import { registrationSubmission } from "./handles/registration.mjs";
 import { logInSubmission } from "./handles/login.mjs";
-import { getAuctionsList } from "./API/Auctions/getAuctionsList.mjs";
 import { createItemElements } from "./API/Auctions/getItem.mjs";
 import { createProfile } from "./profile/getProfile.mjs";
+import { createAuctionList } from "./auction/createAuctionList.mjs";
 
 const path = location.pathname;
 
@@ -16,7 +16,7 @@ switch (path) {
         logInSubmission();
         break;
     case "/auctions/":
-        getAuctionsList();
+        createAuctionList();
         break;
     case "/auction/":
         createItemElements();

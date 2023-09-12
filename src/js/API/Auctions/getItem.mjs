@@ -28,7 +28,6 @@ export async function createItemElements() {
     sellerName.textContent = itemData.seller.name;
     sellerName.href = `../../../../profile/?name=${itemData.seller.name}`;
     productTitle.textContent = itemData.title; 
-    console.log(itemData.bids.length)
     
     if (itemData.bids.length === 0){
         highestBid.textContent = "No bids yet";

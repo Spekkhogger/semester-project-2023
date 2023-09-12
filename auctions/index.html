@@ -10,9 +10,10 @@
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
             <link
-              href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
-              rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
             />
+            <script src="https://kit.fontawesome.com/eadebda42a.js" crossorigin="anonymous"></script>
             <script
               src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
               defer
@@ -56,12 +57,21 @@
               </nav>
         </header>
         <main>
-            <div class="searchContainer d-flex">
-                <input class="search" type="text" id="searchInput">
+          <div class="container">
+            <div class="searchContainer m-3">
+              <div class="input-group justify-content-center">
+                <div class="form-outline">
+                  <input type="search" id="searchAuctions" class="form-control" placeholder="Search"/>
+                </div>
+                <button type="button" class="btn custom-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
             </div>
             <div class="listingContainer d-flex flex-wrap justify-content-evenly">
 
             </div>
+          </div>
         </main>
         <footer>
 

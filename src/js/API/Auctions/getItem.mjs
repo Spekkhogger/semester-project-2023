@@ -10,7 +10,7 @@ export async function getAuctionItem() {
     const apiCall = base_API_URL + "listings/" + queryID + queryParam;
 
     const response = await fetch (apiCall);
-    const result = response.json(); 
+    const result = await response.json(); 
     return result;
 }
 

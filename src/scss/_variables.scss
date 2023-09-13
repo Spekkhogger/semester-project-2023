@@ -7,6 +7,15 @@
     --font-color-white: #fff;
 }
 
+a {
+    color: var(--font-color-black);
+    text-decoration: none;
+}
+
+#sellerName:hover{
+    text-decoration: underline;
+}
+
 .custom-primary {
     background-color: var(--light-pink);
     color: var(--dark-red);

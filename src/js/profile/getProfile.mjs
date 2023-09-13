@@ -47,12 +47,14 @@ export async function createProfile(){
         auctionListings.forEach(item => {
             const wrap = document.createElement("a");
             wrap.href = `../../../auction/?id=${item.id}`
-            wrap.classList.add("m-3"); 
+            wrap.classList.add("rounded", "m-3"); 
             createImage(wrap, item.media[0], 250);
             const title = document.createElement("p");
             title.textContent = item.title;
             auctionsTab.appendChild(wrap); 
             wrap.appendChild(title); 
+            wrap.style.padding = "10px"
+            wrap.style.backgroundColor = "white"
         });
 
 

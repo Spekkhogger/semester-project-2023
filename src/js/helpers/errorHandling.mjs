@@ -1,7 +1,7 @@
 export function errorHandling (placement, cError) {
     placement.textContent = ``; 
     const errorImage = document.createElement("img"); 
-    errorImage.src = "../../../images/avatar-1577909_640.png"; 
+    errorImage.src = "../../../images/cherry_1791356bw.png"; 
     errorImage.style.width = "200px"
     const errorMessage = document.createElement("div"); 
     errorMessage.innerHTML = `<h5> Oops, looks like something went wrong</h5>

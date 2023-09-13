@@ -1,6 +1,7 @@
 import { base_API_URL } from "../constants.mjs";
 import { loadKey } from "../storage.mjs";
 import { createImage } from "../helpers/createImages.mjs"; 
+import { errorHandling } from "../helpers/errorHandling.mjs";
 
 export async function getProfile(){
     const queryString = document.location.search;
@@ -23,7 +24,6 @@ export async function getProfile(){
 }
 
 export async function createProfile(){
-    const errorMessage = document.querySelector(".errorContainer");
     const container = document.querySelector(".container");
     const profileImage = document.querySelector("#profileImage"); 
     const userName = document.querySelector("#profileName"); 
@@ -62,8 +62,7 @@ export async function createProfile(){
 
 
     } catch (error) {
-        errorMessage.textContent = "Oopsiewoopsie, something went wrong: " + error;
-        container.style.display = "none";
+        errorHandling(container, error); 
     }
 
 }

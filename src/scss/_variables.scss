@@ -45,3 +45,7 @@ a {
     width: 15rem;
     height: auto;
 }
+
+.card:hover{
+    box-shadow: 5px 5px 20px -10px rgba(0,0,0,0.5);
+}

@@ -1,4 +1,5 @@
 import { base_API_URL } from "../../constants.mjs";
+import { errorHandling } from "../../helpers/errorHandling.mjs";
 
 export async function getAuctionsList() {
     const apiCall = base_API_URL + `listings`;
@@ -11,7 +12,8 @@ export async function getAuctionsList() {
 
     } catch (error) {
         console.log(error) 
-        // To be fixed
+        const container = document.querySelector(".container");
+        errorHandling(container, error); 
     }
 
 }

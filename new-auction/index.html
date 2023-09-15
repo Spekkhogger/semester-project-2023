@@ -62,14 +62,20 @@
         
     </main>
     <footer>
-      <div class="container">
-        <form action="" class="form-group">
-          <input type="text" class="form-control" name="title" placeholder="Title" required>
-          <input type="text" class="form-control" name="description" placeholder="Discription" required>
-          <input type="text" class="form-control" name="endsAt" placeholder="Ends at" required>
-          <input type="text" class="form-control" name="tags" placeholder="Tags (separate with comma)">
-          <input type="url" class="form-control" name="media" placeholder="Picture (URL)">
-        </form>
+      <div class="container mt-5 col-md-4 text-center" id="newItemWrap">
+        <div class="formWrap">
+          <h1>Create a new auction</h1>
+          <p>* required fields</p>
+          <form action="" class="form-group" id="newAuctionForm">
+            <div id="errorMessageLog"></div>
+            <input type="text" class="form-control mb-2" name="title" id="titleNewForm" placeholder="Title*" required>
+            <input type="text" class="form-control mb-2" name="description" id="descNewForm" placeholder="Description*" required>
+            <input type="date" class="form-control mb-2" name="endsAt" id="endsAtNewForm" placeholder="Ends at*" required>
+            <input type="text" class="form-control mb-2" name="tags" id="tagsNewForm" placeholder="Tags (separate with comma)">
+            <input type="url" class="form-control mb-2" name="media" id="mediaNewForm" placeholder="Picture (URL)">
+            <button class="btn custom-secondary">Add new auction</button>
+          </form>
+        </div>
       </div>
 
     </footer>

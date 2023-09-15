@@ -12,3 +12,14 @@ export function errorHandling (placement, cError) {
 
     placement.classList.add("d-flex", "flex-column", "m-5", "align-items-center", "text-center");
 }
+
+export function errorNoImage (placement, cError) {
+    placement.textContent = ``; 
+    const errorMessage = document.createElement("div"); 
+    errorMessage.innerHTML = `<h5> Oops, looks like something went wrong</h5>
+    <p> Error message: ${cError} </p>`
+
+    placement.appendChild(errorMessage); 
+
+    placement.classList.add("d-flex", "flex-column", "m-5", "align-items-center", "text-center");
+}

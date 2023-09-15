@@ -11,7 +11,6 @@ export function registrationSubmission() {
         
         try {
             await createAccount(profile);
-            console.log(json.errors[0].message)
         } catch (error) {
             message.innerHTML = error;
         }

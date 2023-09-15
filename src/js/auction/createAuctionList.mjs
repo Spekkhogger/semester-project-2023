@@ -11,7 +11,7 @@ export async function createAuctionList() {
         const newDiv = document.createElement("div");
 
         if (i.media[0] === undefined) {
-            i.media[0] = "../../../../images/logo/cherry_1791356.png"
+            i.media[0] = "../../../../images/cherry_1791356 noimage.png"
         }
 
         const title = i.title;

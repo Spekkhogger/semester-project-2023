@@ -8,7 +8,7 @@ export async function createNewAuction() {
     form.addEventListener("submit", async(event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        const newAuction = Object.fromEntries(formData.entries);
+        const newAuction = Object.fromEntries(formData.entries());
         console.log(newAuction); 
 
         try {

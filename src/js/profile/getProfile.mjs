@@ -1,27 +1,7 @@
-import { base_API_URL } from "../constants.mjs";
 import { loadKey } from "../storage.mjs";
 import { createImage } from "../helpers/createImages.mjs"; 
 import { errorHandling } from "../helpers/errorHandling.mjs";
-
-export async function getProfile(){
-    const queryString = document.location.search;
-    const params = new URLSearchParams(queryString);
-    const path = params.get("name");
-    const queryParam = "?_listings=true";
-    const apiCall = base_API_URL + `profiles/` + path + queryParam ;
-    const method = "get"; 
-    const key = loadKey("token");
-
-    const response = await fetch (apiCall,{
-        headers: {
-            "Content-type": "application/json",
-            "Authorization": `Bearer ${key}`
-       },
-       method
-    });
-    const profileData = await response.json(); 
-    return profileData; 
-}
+import { getProfile } from "../API/Auth/profileauth.mjs";
 
 export async function createProfile(){
     const container = document.querySelector(".container");

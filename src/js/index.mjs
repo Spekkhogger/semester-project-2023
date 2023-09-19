@@ -2,11 +2,12 @@ import { saveKey, loadKey, removeKey } from "./storage.mjs";
 
 import { registrationSubmission } from "./handles/registration.mjs";
 import { logInSubmission } from "./handles/login.mjs";
-import { createItemElements } from "./API/Auctions/getItem.mjs";
+import { createItemElements } from "./auction/auctionItem.mjs";
 import { createProfile } from "./profile/getProfile.mjs";
 import { createAuctionList } from "./auction/createAuctionList.mjs";
 import { searchAuctions } from "./search/searchList.mjs";
 import { createNewAuction } from "./auction/createNewAuction.mjs";
+
 
 const path = location.pathname;
 

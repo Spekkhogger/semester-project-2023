@@ -55,7 +55,7 @@
         </header>
         <main>
           <div class="container">
-            <div class="searchContainer m-3">
+            <div class="searchContainer m-3 d-flex">
               <div class="input-group justify-content-center">
                 <div class="form-outline">
                   <input type="search" id="searchAuctions" class="form-control" placeholder="Search"/>
@@ -64,6 +64,18 @@
                   <i class="fas fa-search"></i>
                 </button>
               </div>
+              
+                <div class="dropdown" id="filterContainer">
+                  <button class="btn btn-secondary dropdown-toggle custom-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort by:
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item" id="newestOption">Newest</li>
+                    <li class="dropdown-item" id="endOption">End date</li>
+                    <li class="dropdown-item" id="popularOption">Popular</li>
+                  </ul>
+                </div>
+              
             </div>
             <div class="listingContainer d-flex flex-wrap justify-content-evenly">
 

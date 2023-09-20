@@ -54,3 +54,11 @@ a {
     background-color: var(--light-pink);
     padding: 1rem;
 }
+
+.dropdown-item:hover {
+    cursor: pointer;
+}
+
+// .btn {
+//     max-height: 40px;
+// }

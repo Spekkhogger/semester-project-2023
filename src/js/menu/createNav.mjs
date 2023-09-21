@@ -7,7 +7,7 @@ export function createNav() {
     if (!isLoggedIn()) {
         navBar.innerHTML = `<ul class="navbar-nav">
                                 <li class="nav-item m-1">
-                                <a class="nav-link" href="../">Auctions</a>
+                                <a class="nav-link" href="../auctions/">Auctions</a>
                                 </li>
                                 <li class="nav-item m-1">
                                 <a class="nav-link" href="../new-auction/">+New auction</a>
@@ -17,7 +17,8 @@ export function createNav() {
                                 </li>
                             </ul>`;
 
-        landingLogIn.style.display = "none"
+        // landingLogIn.style.display = "none";
+
     } else {
         navBar.innerHTML = `<ul class="navbar-nav">
                                 <li class="nav-item m-1">

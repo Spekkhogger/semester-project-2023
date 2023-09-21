@@ -7,9 +7,12 @@ import { createProfile } from "./profile/getProfile.mjs";
 import { createAuctionList } from "./auction/createAuctionList.mjs";
 import { searchAuctions } from "./search/searchList.mjs";
 import { createNewAuction } from "./auction/createNewAuction.mjs";
+import { createNav } from "./menu/createNav.mjs";
 
 
 const path = location.pathname;
+
+createNav();
 
 switch (path) {
     case "/":

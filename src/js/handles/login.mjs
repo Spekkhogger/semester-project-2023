@@ -11,6 +11,7 @@ export function logInSubmission() {
 
         try {
             await logInAccount(profile); 
+            window.location.replace("../../../auctions")
         } catch (error) {
             message.innerHTML = error;
         }

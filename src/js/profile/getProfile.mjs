@@ -1,7 +1,8 @@
-import { loadKey } from "../storage.mjs";
 import { createImage } from "../helpers/createImages.mjs"; 
 import { errorHandling } from "../helpers/errorHandling.mjs";
-import { getProfile } from "../API/Auth/profileauth.mjs";
+import { fetchProfile } from "../API/Auth/profileauth.mjs";
+import { getParam } from "../helpers/getParam.mjs";
+import { getProfileName } from "../helpers/getProfileName.mjs";
 
 export async function createProfile(){
     const container = document.querySelector(".container");
@@ -10,9 +11,16 @@ export async function createProfile(){
     const userCredits = document.querySelector("#credits");
     const numberOfAuctions = document.querySelector("#ongoingAuctionsNumber");
 
-    try {
-        const profileData = await getProfile(); 
+    let name = getParam("name"); 
+    if (!name) {
+        name = getProfileName();
+    }
+    if (!name) {
+        return errorHandling(container, "Could not get profile name"); 
+    }
 
+    try {
+        const profileData = await fetchProfile(name); 
         const auctionListings = profileData.listings;
 
         createImage(profileImage, profileData.avatar, 200); 

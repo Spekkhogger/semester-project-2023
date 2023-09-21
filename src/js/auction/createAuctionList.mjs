@@ -5,8 +5,6 @@ export async function createAuctionList() {
 
     const container = document.querySelector(".listingContainer");
 
-    console.log(auctionsData);
-
     auctionsData.forEach((i) => {
         const newDiv = document.createElement("div");
 
@@ -24,7 +22,7 @@ export async function createAuctionList() {
         `
         <a href="../../../../auction/?id=${id}" id="auctionItem" class="card-body">
             <img src="${image}" class="card-img-top" alt="Image of ${title}" style="object-fit: cover; height: 200px;">
-            <h1 class="card-title">${title}</h1>
+            <h2 class="card-title">${title}</h2>
             <p class="card-text">${description}</p>
 
         </a>

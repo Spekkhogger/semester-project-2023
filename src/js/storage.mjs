@@ -9,6 +9,7 @@ export function loadKey (key){
     }catch(error) {
         console.log(error);
         // Add error alert
+        return null;
     }
 }
 

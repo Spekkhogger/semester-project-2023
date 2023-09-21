@@ -22,11 +22,17 @@ export async function createProfile(){
     try {
         const profileData = await fetchProfile(name); 
         const auctionListings = profileData.listings;
+        const editProfile = document.querySelector("#editButton")
 
         createImage(profileImage, profileData.avatar, 200); 
         userName.textContent = profileData.name; 
         userCredits.textContent += profileData.credits; 
         numberOfAuctions.textContent += profileData.listings.length;
+
+        // Create log out button
+        if (profileData.name !== getProfileName()) {
+            editProfile.style.display = "none"; 
+        }
 
         // Listings section: 
         const auctionsTab = document.querySelector("#auctionsTab");
@@ -41,8 +47,8 @@ export async function createProfile(){
             title.textContent = item.title;
             auctionsTab.appendChild(wrap); 
             wrap.appendChild(title); 
-            wrap.style.padding = "10px"
-            wrap.style.backgroundColor = "white"
+            wrap.style.padding = "10px";
+            wrap.style.backgroundColor = "white";
         });
 
 

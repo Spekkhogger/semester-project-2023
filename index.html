@@ -20,7 +20,7 @@
     />
     <title>Cherry Auctions</title>
   </head>
-  <body>
+  <body id="landingPage">
     <header>
       <nav class="navbar shadow-sm navbar-expand-sm d-flex justify-content-between custom-bg" >
         <div class="logo m-2">
@@ -90,12 +90,24 @@
       </div>
     </header>
 
-    <main>
-      <h1>Cherry Auctions</h1>
-      <div class="btn">Btn</div>
+    <main id="landingPageMain">
+      <div class="container align-items-center justify-content-center d-flex">
+        <div class="background-image align-self-start" id="landingPageImage"></div>
+        <div class="row">
+          <div class="form-outline">
+            <input type="search" id="searchLandingPage" class="form-control center" placeholder="Search"/>
+          </div>
+          <div class="buttons text-center">
+            <div class="btn custom-primary m-3" data-bs-toggle="modal" data-bs-target="#logInModal" id="logInLandingPage">Log in</div>
+            <div class="btn custom-secondary m-3">Auctions</div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
+    <footer>
+
+    </footer>
   </body>
   <script type="module" src="./src/js/index.mjs"></script>
   

@@ -69,3 +69,28 @@ a {
     -webkit-line-clamp: 3; 
     overflow: hidden;
 }
+
+#landingPage {
+    background-color: var(--light-blue);
+}
+
+#landingPageMain {
+    height: 100vh;
+    display: flex;
+}
+
+#landingPageImage {
+    background-image: url("../../images/pexels-taryn-elliott-4198572\ Medium.jpeg");
+    background-color: var(--light-blue);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 628px;
+    width: 586px;
+    z-index: -999;
+}
+
+#searchLandingPage {
+    display: flex;
+}

@@ -51,7 +51,17 @@
 
       </div>
       <div class="container">
-        <div class="editProfile col btn custom-primary m-3 float-rigth" id="editButton"><i class="fa-solid fa-gear"></i></div>
+
+        <div class="dropdown">
+          <button class="btn custom-primary dropdown-toggle" type="button" id="editButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edit profile
+          </button>
+          <div class="dropdown-menu" aria-labelledby="editButton">
+            <a class="dropdown-item" href="#">Edit profile</a>
+            <a class="dropdown-item" href="#" id="logOutButton">Log out</a>
+          </div>
+        </div>
+
         <div class="profileWrap d-flex">
           <div class="img-fluid m-3" id="profileImage"></div>
           <div class="profileInfo d-flex flex-column justify-content-between col-10">
@@ -115,4 +125,6 @@
     <footer></footer>
   </body>
   <script type="module" src="../src/js/index.mjs"></script>
+
+  
 </html>

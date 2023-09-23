@@ -8,6 +8,8 @@ import { createAuctionList } from "./auction/createAuctionList.mjs";
 import { searchAuctions } from "./search/searchList.mjs";
 import { createNewAuction } from "./auction/createNewAuction.mjs";
 import { createNav } from "./menu/createNav.mjs";
+import { logOut } from "./handles/logOut.mjs";
+import { editProfile } from "./profile/changeProfile.mjs";
 
 
 const path = location.pathname;
@@ -29,6 +31,8 @@ switch (path) {
         break;
     case "/profile/":
         createProfile();
+        logOut();
+        editProfile(); 
         break;
     case "/new-auction/":
         createNewAuction();

@@ -19,11 +19,21 @@ a {
 .custom-primary {
     background-color: var(--light-pink);
     color: var(--dark-red);
+    border: 2px solid var(--light-pink);
+}
+.custom-primary:hover {
+    background-color: var(--bright-pink);
+    border: solid 2px var(--bright-pink);
 }
 
 .custom-secondary {
     background-color: var(--dark-red);
     color: var(--font-color-white);
+    border: 2px solid var(--dark-red);
+}
+.custom-secondary:hover{
+    background-color: var(--font-color-white);
+    border: 2px solid var(--dark-red);
 }
 
 .custom-bg {
@@ -97,4 +107,11 @@ a {
 
 .nav-item:hover{
     text-decoration: underline;
+}
+
+
+#footer {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-top: 1px solid var(--font-color-black);
 }

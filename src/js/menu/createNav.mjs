@@ -2,7 +2,6 @@ import { isLoggedIn } from "../helpers/isLoggedIn.mjs";
 
 export function createNav() {
     const navBar = document.querySelector("#navItems");
-    const landingLogIn = document.querySelector("#logInLandingPage");
 
     if (!isLoggedIn()) {
         navBar.innerHTML = `<ul class="navbar-nav">
@@ -16,8 +15,6 @@ export function createNav() {
                                 <a class="nav-link active" href="../profile/">Profile</a>
                                 </li>
                             </ul>`;
-
-        // landingLogIn.style.display = "none";
 
     } else {
         navBar.innerHTML = `<ul class="navbar-nav">

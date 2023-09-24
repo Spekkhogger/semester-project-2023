@@ -23,7 +23,7 @@ The page and URL are hosted on Netlify.com
 ### Build: 
 1. Clone repo
 2. Run `npm install`
-3. npm `run build`
+3. Run `npm run build`
 
 Note that dist has not been ignored to be able to run the devdeps on netlify for delivery 24.09.2023.
 

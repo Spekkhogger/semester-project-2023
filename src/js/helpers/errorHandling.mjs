@@ -9,6 +9,7 @@ export function errorHandling (placement, cError) {
 
     placement.appendChild(errorImage); 
     placement.appendChild(errorMessage); 
+    errorMessage.classList.add("text-danger"); 
 
     placement.classList.add("d-flex", "flex-column", "m-5", "align-items-center", "text-center");
 }
